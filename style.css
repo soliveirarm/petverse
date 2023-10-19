@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Titan+One&display=swap");
+
+:root {
+  --primary-700: hsl(190, 73%, 66%);
+  --primary-800: hsl(190, 73%, 50%);
+  --primary-850: hsl(190, 73%, 35%);
+  --primary-900: hsl(190, 73%, 30%);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Generic containers */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Generic classes */
+.highlight {
+  color: var(--primary-800);
+}
+
+/* header */
+header {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-700);
+  border-bottom: 5px solid #b4e8f3;
+}
+
+header.sticky-header {
+  position: fixed;
+  width: 100%;
+  height: 20px;
+  top: 0;
+}
+
+/* header mobile */
+header.headerBottom {
+  opacity: 0.9;
+  height: 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.logo {
+  width: 50px;
+  padding-right: 10px;
+}
+
+header .page-title {
+  color: #fff;
+  font-size: 1.7rem;
+  font-family: "Titan One", cursive;
+  padding-right: 0.5rem;
+}
+
+.bar-container.active {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: -2rem;
+}
+
+.bar.active {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--primary-700);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.fa-solid {
+  font-size: 1.2rem;
+}
+
+.icons span,
+.bar span {
+  color: #fff;
+  padding-right: 0.6rem;
+  cursor: pointer;
+}
+
+.icons {
+  margin-left: 8px;
+  align-self: end;
+}
+
+.icons .fa-solid,
+.bar .fa-solid {
+  margin-right: 0.5rem;
+}
+
+.bar .icon {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  row-gap: 0.5rem;
+}
+
+.bar .fa-solid {
+  align-self: center;
+}
+
+/* Main */
+main {
+  width: 90%;
+  margin: 20px auto;
+}
+
+/* Services */
+.services,
+.selling-points {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.services {
+  margin-top: 6rem;
+}
+
+.services,
+.service {
+  gap: 1rem;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  color: var(--primary-800);
+  font-size: 1.2rem;
+}
+
+.services a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.services .fa-solid {
+  display: flex;
+  justify-content: center;
+  background-color: inherit;
+  color: var(--primary-700);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 0.8rem;
+  font-size: 2rem;
+  transition: 0.2s;
+  border: 2px solid var(--primary-700);
+}
+
+.services .fa-solid:hover {
+  background-color: var(--primary-700);
+  color: #fff;
+}
+
+.selling-points {
+  margin-top: 4rem;
+  gap: 10px;
+}
+
+/* Selling points */
+.selling-points .container {
+  display: flex;
+  align-items: center;
+  column-gap: 0.7rem;
+  background-color: #ededed;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.selling-points .container .fa-solid {
+  color: var(--primary-850);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+/* Cards */
+.card {
+  margin: auto;
+  width: 350px;
+}
+
+.card__text h2 {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #2a545c;
+}
+
+.card__img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+main > .title {
+  padding: 1rem;
+  color: var(--primary-800);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #ecf9fc;
+}
+
+.card .price {
+  color: var(--primary-800);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.card button {
+  font-family: "Poppins", sans-serif;
+  border: 3px solid var(--primary-700);
+  background-color: inherit;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: var(--primary-900);
+}
+
+.card button:hover {
+  background-color: var(--primary-700);
+  color: white;
+}
+
+.card button:active {
+  background-color: var(--primary-800);
+}
+
+/* Email sign-up form */
+.sign-up {
+  background-color: var(--primary-700);
+  max-width: 90%;
+  margin: auto;
+  border-radius: 30px;
+  border: 5px solid #b4e8f3;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+.sign-up .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.sign-up h2,
+footer h2 {
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.sign-up input,
+.sign-up select,
+.sign-up button {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 5px var(--primary-800);
+  transition: 0.2s;
+}
+
+.sign-up input,
+.sign-up select {
+  padding: 1rem;
+}
+
+.sign-up input:focus,
+.sign-up button:focus,
+.sign-up select:focus {
+  box-shadow: 1px 1px 20px var(--primary-850);
+}
+
+.sign-up input:focus {
+  background-color: #ecf9fc;
+}
+
+.sign-up button {
+  font-weight: 500;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+}
+
+.sign-up button:hover {
+  box-shadow: 1px 1px 20px var(--primary-800);
+  background-color: #b4e8f3;
+}
+
+/* Faz o placeholder sumir quando o input está em foco */
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+/* Footer */
+footer {
+  border-top: #b4e8f3 solid 5px;
+  background-color: var(--primary-700);
+  min-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+footer .fa-brands,
+footer .fa-solid {
+  color: #fff;
+  font-size: 2rem;
+  padding-right: 0.8rem;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer .socials,
+footer .links,
+footer .mobile-apps,
+footer .payment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer .info a {
+  display: block;
+}
+
+footer .info a:hover {
+  text-decoration: underline;
+}
+
+footer .mobile-apps .container i:hover,
+footer .socials .container i:hover {
+  color: #ecf9fc;
+}
+
+footer .payment {
+  margin-bottom: 3.5rem;
+}
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid #fff;
+  background-color: var(--primary-700);
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-800);
+}
+
+/* Tablet */
+@media screen and (min-width: 767px) {
+  .bar.active {
+    width: 50%;
+    border-radius: 80px;
+    margin-bottom: 10px;
+  }
+
+  footer .payment {
+    margin-bottom: 4.2rem;
+  }
+}
+/* Desktop */
+@media screen and (min-width: 1025px) {
+  header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4%;
+  }
+
+  .page-title {
+    display: block;
+    font-size: 1.7rem;
+  }
+
+  .fa-solid {
+    font-size: 1.3rem;
+  }
+
+  .services {
+    margin-top: 1rem;
+  }
+
+  .icons {
+    background-color: inherit;
+    width: auto;
+    height: auto;
+    overflow-y: visible;
+    visibility: visible;
+    position: static;
+    display: inline;
+  }
+
+  .icons span {
+    font-size: 1rem;
+    text-decoration: none;
+    /* padding-right: 1rem; */
+    margin-right: 0.3rem;
+    letter-spacing: 0.3px;
+    position: relative;
+    padding: 0 10px;
+  }
+
+  .icons span::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 0;
+    left: 50%;
+    bottom: -10px;
+    transition: 0.3s;
+  }
+
+  .icons span:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  .icons span:hover {
+    background-color: inherit;
+  }
+}
